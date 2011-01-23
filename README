@@ -1,0 +1,29 @@
+Rules of the game:
+
+1. The game is played on a decoding board where the challenge is a pattern of 4 code pegs.
+2. The Code-Maker generate the challenge that is a random pattern of 4 code pegs
+3. A code peg can be of one of the 6 different colors: white, yellow, green, blue, purple
+4. The challenge can contain duplicated colors, it could be made of 4 code pegs of the same color
+5. The Code-Breaker tries to guess the challenge, in both order and color, 
+6. The Code-Maker communicate to the Code-Breaker the number of pegs in the guess that are correct 
+   in both color and position and the pegs correct in color and wrong in position
+7. After the feedback the Code-Breaker can make anothe guess, up to 7 turns
+8. 1000 games are played with 1000 different challenges, the Code-Breaker that collect the higher 
+   number of victories is the winner of the match
+9. When 2 or more Code-Breakers collect the same higher number of victories, the one that made 
+   the lower number of tries is the winner of the match 
+
+
+
+Rules of the competition:
+
+1. The spirit of the competition is to find the best MasterMind Code-Breaker algorithm.
+2. Anything that is deemed against the spirit of the competition will be grounds for disqualification.
+3. Interfering with an opponent (i.e. via reflection) is against the spirit of the competition.
+5. A limit of 4 second of CPU time per game is allotted to each competitor on the primary thread.
+6. Running out of time results in losing the current game.
+7. Any unhandled exception will result in losing the current game.
+8. Max total size (un-compressed) of an entry is 1 MB.
+9. Original algorithms will compete against each other original algorithm so implementation of known
+   algorithms will compete against each other known algorithm, there will be 1 winner for each category.
+A. Your entry must implement the IMasterMindCodeBreaker interface
