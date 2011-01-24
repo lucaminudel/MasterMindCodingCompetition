@@ -49,7 +49,7 @@ namespace MasterMind.CompetitionEngine
 				gameVictoryCount += 1;
 				matchGuessesCount += turn;
 				gameFinished = true;
-				codeBreaker.GameEnded(challenge);
+				EndGame(challenge);
 			}
 		}
 
