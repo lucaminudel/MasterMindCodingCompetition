@@ -14,9 +14,9 @@ namespace MasterMind
             Console.WriteLine("Match begin");
             Console.WriteLine("----------------------------------------------------------------");
 #endif 
-            var masterMingCompetitionMatch = new Match(opponents, TimeSpan.FromSeconds(4));
+            var masterMindCompetitionMatch = new Match(opponents, TimeSpan.FromSeconds(4));
             string results;
-            masterMingCompetitionMatch.PlayGames(1000, out results);
+            masterMindCompetitionMatch.PlayGames(1000, out results);
 
 #if FRAMEWORK_DEBUG
             Console.WriteLine("----------------------------------------------------------------");
