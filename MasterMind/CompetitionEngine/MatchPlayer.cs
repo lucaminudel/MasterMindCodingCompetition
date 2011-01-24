@@ -37,12 +37,12 @@ namespace MasterMind.CompetitionEngine
 			gameCount += 1;
 			gameFinished = false;
 			stopWatch.Reset();
-			SafeExecute(() => codeBreaker.StartGame());
+			ExecuteAndCheckElapsedTimeAndExceptions(() => codeBreaker.StartGame());
 		}
 
 		public void GuessCode(int turn, Code challenge)
 		{
-			SafeExecute(() => lastGuess = codeBreaker.GetCodeGuess());
+			ExecuteAndCheckElapsedTimeAndExceptions(() => lastGuess = codeBreaker.GetCodeGuess());
 
 			if (lastGuess == challenge)
 			{
@@ -57,7 +57,7 @@ namespace MasterMind.CompetitionEngine
 		{
 			GuessResult guessResult = GuessResult.Calulate(challenge, lastGuess);
 
-			SafeExecute(() => codeBreaker.SetGuessResult(guessResult));
+			ExecuteAndCheckElapsedTimeAndExceptions(() => codeBreaker.SetGuessResult(guessResult));
 		}
 
 		public void EndGame(Code challenge)
@@ -92,7 +92,7 @@ namespace MasterMind.CompetitionEngine
 		}
 
 
-		private void SafeExecute(Command command)
+		private void ExecuteAndCheckElapsedTimeAndExceptions(Command command)
 		{
 			stopWatch.Start();
 			try
